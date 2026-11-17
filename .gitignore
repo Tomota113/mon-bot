@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.joblib
+*.onnx
+weights.pt
+*.zip
+
+.env
+.env.*

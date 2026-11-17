@@ -1,0 +1,32 @@
+import sys
+from pathlib import Path
+
+sys.path.insert(0, '/home/ibrahim-tomota/mon-bot')
+from arena_sdk.opponents import resolve_opponent_arg
+from arena_sdk.opponents import resolve_submission_path
+from i151_engine.runner.match_runner import MatchConfig, play_bots_match
+import bot
+
+seeds = [848914317, 1477911113, 2063595735, 329389206]
+opp = resolve_opponent_arg('medium')
+challenger_dir = Path('/home/ibrahim-tomota/mon-bot')
+
+print("Testing baseline seed match runner...")
+for s in seeds:
+    bot.setup(challenger_dir)
+    opp.bot.setup(opp.submission_dir or Path('.'))
+    config = MatchConfig(seed=s, target_score=151, initial_dealer_index=1)
+    res = play_bots_match(
+        bot,
+        opp.bot,
+        config,
+        challenger_name="mon-bot",
+        opponent_name=opp.name,
+        opponent_id=opp.opponent_id,
+        challenger_dir=challenger_dir,
+        opponent_dir=opp.submission_dir,
+        manage_lifecycle=False,
+    )
+    bot.teardown()
+    opp.bot.teardown()
+    print(f"Seed {s}: Winner={res.winner_id} (Scores: {res.final_scores}, Rounds: {res.rounds_played})")

@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-08-30T23:40:17.420696+00:00",
+  "bot_path": "/home/ibrahim-tomota/mon-bot/bot.py",
+  "tier_choice": "seeds",
+  "games_per_series": 50,
+  "target_score": 151,
+  "tier4_seeds": {
+    "seeds": [
+      {
+        "seed": 848914317,
+        "opponent": "medium_bot",
+        "winner_id": "p0",
+        "winner": "mon-bot",
+        "reason": "normal",
+        "won": true,
+        "scores": {
+          "p0": 67,
+          "p1": 152
+        },
+        "rounds": 13,
+        "steps": 490
+      },
+      {
+        "seed": 1477911113,
+        "opponent": "medium_bot",
+        "winner_id": "p1",
+        "winner": "medium_bot",
+        "reason": "normal",
+        "won": false,
+        "scores": {
+          "p0": 190,
+          "p1": 89
+        },
+        "rounds": 19,
+        "steps": 699
+      },
+      {
+        "seed": 2063595735,
+        "opponent": "medium_bot",
+        "winner_id": "p1",
+        "winner": "medium_bot",
+        "reason": "normal",
+        "won": false,
+        "scores": {
+          "p0": 152,
+          "p1": 143
+        },
+        "rounds": 28,
+        "steps": 1122
+      },
+      {
+        "seed": 329389206,
+        "opponent": "medium_bot",
+        "winner_id": "p1",
+        "winner": "medium_bot",
+        "reason": "normal",
+        "won": false,
+        "scores": {
+          "p0": 155,
+          "p1": 81
+        },
+        "rounds": 19,
+        "steps": 669
+      }
+    ],
+    "passed": false
+  },
+  "summary": {
+    "tier1_passed": null,
+    "tier2_passed": null,
+    "tier3_passed": null,
+    "tier4_passed": false,
+    "overall_passed": false,
+    "verdict": "BENCHMARK_FAILED"
+  },
+  "latency_profile_ms": {
+    "count": 1501,
+    "min": 0.001,
+    "mean": 20.415,
+    "median": 0.01,
+    "p90": 89.846,
+    "p95": 150.314,
+    "p99": 150.579,
+    "max": 152.597,
+    "slow_moves_gt_300ms": 0,
+    "timeouts_gt_1000ms": 0,
+    "budget_compliance_pct": 100.0
+  }
+}
